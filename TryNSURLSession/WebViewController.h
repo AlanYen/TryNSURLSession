@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  WebViewController.h
 //  TryNSURLSession
 //
 //  Created by Alan.Yen on 2015/9/15.
@@ -8,10 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface WebViewController : UIViewController
 
-@property (strong, nonatomic) UIWindow *window;
-
+@property (strong, nonatomic) NSData *webData;
 
 @end
 

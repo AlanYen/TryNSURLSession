@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dpK-yc-HoD">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Scm-zy-7vB">
+            <objects>
+                <navigationController id="dpK-yc-HoD" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Th5-gH-QaW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="4sh-aM-93H"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qTc-qC-cSf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-448" y="252"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +31,79 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="32K-26-i7T">
+                                <rect key="frame" x="225" y="135" width="150" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="UhI-9l-fe3"/>
+                                    <constraint firstAttribute="width" constant="150" id="w46-ef-8gj"/>
+                                </constraints>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lon-9h-2MF">
+                                <rect key="frame" x="250" y="155" width="100" height="44"/>
+                                <color key="backgroundColor" red="0.18039215689999999" green="0.29411764709999999" blue="0.52549019610000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="KV0-tD-hO4"/>
+                                    <constraint firstAttribute="height" constant="44" id="Ohk-91-OQV"/>
+                                </constraints>
+                                <state key="normal" title="下載">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startDownLoadButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MVC-DE-A8p"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="lon-9h-2MF" secondAttribute="centerX" id="9xz-qX-Ykz"/>
+                            <constraint firstItem="32K-26-i7T" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="71" id="Cnr-Uc-xJK"/>
+                            <constraint firstAttribute="centerX" secondItem="32K-26-i7T" secondAttribute="centerX" id="QX2-Sa-s5w"/>
+                            <constraint firstItem="lon-9h-2MF" firstAttribute="top" secondItem="32K-26-i7T" secondAttribute="bottom" constant="18" id="ZwU-F3-V7S"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="9hT-a5-DkL"/>
+                    <connections>
+                        <outlet property="progressView" destination="32K-26-i7T" id="u5F-wK-iB6"/>
+                        <segue destination="Huh-ux-fK2" kind="show" identifier="ToWebVC" id="AIw-kQ-ebD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="ATF-2h-sHf">
+            <objects>
+                <viewController storyboardIdentifier="WebViewController" id="Huh-ux-fK2" customClass="WebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="akJ-bt-Cua"/>
+                        <viewControllerLayoutGuide type="bottom" id="WNt-q9-HFB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h3x-jg-zdc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yx0-sZ-FDC">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Yx0-sZ-FDC" firstAttribute="top" secondItem="h3x-jg-zdc" secondAttribute="top" id="blm-YH-7CY"/>
+                            <constraint firstAttribute="trailing" secondItem="Yx0-sZ-FDC" secondAttribute="trailing" id="j3A-sL-fLw"/>
+                            <constraint firstItem="Yx0-sZ-FDC" firstAttribute="leading" secondItem="h3x-jg-zdc" secondAttribute="leading" id="ouA-dD-OWC"/>
+                            <constraint firstItem="WNt-q9-HFB" firstAttribute="top" secondItem="Yx0-sZ-FDC" secondAttribute="bottom" id="qxB-dQ-mPz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="Yx0-sZ-FDC" id="4iF-ed-UYv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WdX-mA-2j8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1198" y="252"/>
         </scene>
     </scenes>
 </document>

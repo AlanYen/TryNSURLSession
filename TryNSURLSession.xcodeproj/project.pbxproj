@@ -14,6 +14,7 @@
 		2DF7B5791BA7FE96000B7370 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DF7B5781BA7FE96000B7370 /* Images.xcassets */; };
 		2DF7B57C1BA7FE96000B7370 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DF7B57A1BA7FE96000B7370 /* LaunchScreen.xib */; };
 		2DF7B5881BA7FE96000B7370 /* TryNSURLSessionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF7B5871BA7FE96000B7370 /* TryNSURLSessionTests.m */; };
+		2DF7B5931BA80A7D000B7370 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF7B5921BA80A7D000B7370 /* WebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		2DF7B5811BA7FE96000B7370 /* TryNSURLSessionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TryNSURLSessionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DF7B5861BA7FE96000B7370 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DF7B5871BA7FE96000B7370 /* TryNSURLSessionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TryNSURLSessionTests.m; sourceTree = "<group>"; };
+		2DF7B5911BA80A7D000B7370 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		2DF7B5921BA80A7D000B7370 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 		2DF7B56A1BA7FE96000B7370 /* TryNSURLSession */ = {
 			isa = PBXGroup;
 			children = (
+				2DF7B5911BA80A7D000B7370 /* WebViewController.h */,
+				2DF7B5921BA80A7D000B7370 /* WebViewController.m */,
 				2DF7B56F1BA7FE96000B7370 /* AppDelegate.h */,
 				2DF7B5701BA7FE96000B7370 /* AppDelegate.m */,
 				2DF7B5721BA7FE96000B7370 /* ViewController.h */,
@@ -222,6 +227,7 @@
 				2DF7B5741BA7FE96000B7370 /* ViewController.m in Sources */,
 				2DF7B5711BA7FE96000B7370 /* AppDelegate.m in Sources */,
 				2DF7B56E1BA7FE96000B7370 /* main.m in Sources */,
+				2DF7B5931BA80A7D000B7370 /* WebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +354,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TryNSURLSession/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -358,6 +365,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TryNSURLSession/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
