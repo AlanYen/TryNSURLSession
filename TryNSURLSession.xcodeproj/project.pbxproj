@@ -173,6 +173,11 @@
 				TargetAttributes = {
 					2DF7B5671BA7FE96000B7370 = {
 						CreatedOnToolsVersion = 6.4;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					2DF7B5801BA7FE96000B7370 = {
 						CreatedOnToolsVersion = 6.4;
@@ -424,6 +429,7 @@
 				2DF7B58D1BA7FE96000B7370 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2DF7B58E1BA7FE96000B7370 /* Build configuration list for PBXNativeTarget "TryNSURLSessionTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +438,7 @@
 				2DF7B5901BA7FE96000B7370 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

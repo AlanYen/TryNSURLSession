@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dpK-yc-HoD">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
@@ -39,38 +40,40 @@
                                     <constraint firstAttribute="width" constant="150" id="w46-ef-8gj"/>
                                 </constraints>
                             </progressView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lon-9h-2MF">
-                                <rect key="frame" x="250" y="155" width="100" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6k-JF-IgI">
+                                <rect key="frame" x="250" y="157" width="100" height="44"/>
                                 <color key="backgroundColor" red="0.18039215689999999" green="0.29411764709999999" blue="0.52549019610000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="KV0-tD-hO4"/>
-                                    <constraint firstAttribute="height" constant="44" id="Ohk-91-OQV"/>
+                                    <constraint firstAttribute="height" constant="44" id="nT4-26-6pa"/>
+                                    <constraint firstAttribute="width" constant="100" id="qCa-0d-tHL"/>
                                 </constraints>
-                                <state key="normal" title="下載">
+                                <state key="normal" title="背景下載">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="startDownLoadButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MVC-DE-A8p"/>
+                                    <action selector="startBackgroundDownLoadButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="OzY-II-gE4"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="lon-9h-2MF" secondAttribute="centerX" id="9xz-qX-Ykz"/>
                             <constraint firstItem="32K-26-i7T" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="71" id="Cnr-Uc-xJK"/>
+                            <constraint firstAttribute="centerX" secondItem="m6k-JF-IgI" secondAttribute="centerX" id="MOe-FW-fD0"/>
                             <constraint firstAttribute="centerX" secondItem="32K-26-i7T" secondAttribute="centerX" id="QX2-Sa-s5w"/>
-                            <constraint firstItem="lon-9h-2MF" firstAttribute="top" secondItem="32K-26-i7T" secondAttribute="bottom" constant="18" id="ZwU-F3-V7S"/>
+                            <constraint firstItem="m6k-JF-IgI" firstAttribute="top" secondItem="32K-26-i7T" secondAttribute="bottom" constant="20" id="VbT-Vq-VlM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9hT-a5-DkL"/>
                     <connections>
+                        <outlet property="downloadButton" destination="m6k-JF-IgI" id="ZJ3-b3-jQw"/>
                         <outlet property="progressView" destination="32K-26-i7T" id="u5F-wK-iB6"/>
                         <segue destination="Huh-ux-fK2" kind="show" identifier="ToWebVC" id="AIw-kQ-ebD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="334" y="252"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="ATF-2h-sHf">
